@@ -18,7 +18,7 @@ app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather App',
         temp: 30,
-        location: "Mumbai is Gey",
+        location: "Chennai is Great",
         svg: "cloudy.svg"
     })
 })
