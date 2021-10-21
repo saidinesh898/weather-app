@@ -1,8 +1,9 @@
 .glassContainer {
     background-image: url(../img/summer.webp);
-    min-height: 65vh;
+    min-height: 60vh;
     padding-top: 10vh;
     padding-left: 2vw;
+    background-size: cover;
 }
 
 .glassCard {
@@ -14,9 +15,33 @@
     border: 1px solid rgba( 255, 255, 255, 0.18);
     padding: 1em;
     max-width: 25vw;
+    word-wrap: unset;
     color: #FFF;
 }
 
 body {
     background-color: #F0FFFF;
+}
+
+@media (max-width: 1120px) {
+    .glassCard {
+        background: rgba( 255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+        backdrop-filter: blur( 11px);
+        -webkit-backdrop-filter: blur( 11px);
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18);
+        padding: 1em;
+        min-width: 45vw;
+        max-width: 45vw;
+        word-wrap: unset;
+        color: #FFF;
+    }
+    .glassContainer {
+        background-image: url(../img/summer.webp);
+        min-height: 45vh;
+        padding-top: 10vh;
+        padding-left: 2vw;
+        background-size: cover;
+    }
 }

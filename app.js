@@ -14,17 +14,37 @@ app.use(express.static(path.join(__dirname, '../weather-app/public')))
 app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
 
+
 app.get('', (req, res) => {
-    res.render('index', {
-        title: 'Weather App',
-        temp: 30,
-        location: "Chennai is Great",
-        svg: "cloudy.svg"
+    var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    if (ip.substr(0, 7) == "::ffff:") {
+        ip = ip.substr(7)
+        console.log(ip)
+    }
+    forcast(location = ip, (error, ForcastData) => {
+        console.log(ip)
+        if (error) {
+            return res.send({
+                error
+            })
+        }
+        res.render('index', {
+            ForcastData
+        })
     })
+
+    // res.render('index', {
+    //     title: 'Weather App',
+    //     temp: 30,
+    //     location: "Chennai is Great",
+    //     svg: "cloudy.svg"
+    // })
 })
 
 app.get('/help', (req, res) => {
-    res.send("<h1>Help</h1>")
+    console.log(app.remoteAddress)
+    res.sendStatus(503)
+
 })
 app.get('/weather', (req, res) => {
     if (!req.query.location) {

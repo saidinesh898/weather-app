@@ -10,8 +10,9 @@
 <body>
     <div class="glassContainer">
         <div class="glassCard">
-            <p>{{temp}}</p>
-            <p>{{location}}</p>
+            <p>{{ForcastData.temp_c}}°C</p>
+            <p>{{ForcastData.name}}  {{ForcastData.region }}</p>
+            <p><b>{{ForcastData.country}} </b></p>
             <img src="/svg/{{svg}}" alt="">
         </div>
     
