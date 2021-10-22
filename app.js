@@ -103,7 +103,7 @@ app.get('/code', (req, res) => {
 
 
 
-app.listen(80, () => {
+app.listen(process.env.PORT || 80, () => {
     console.log('server started on port ', 80)
 })
 
