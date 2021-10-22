@@ -63,7 +63,6 @@ weekday[6] = "Saturday";
 let day = weekday[d.getDay()];
 
 
-
 const time = new Date().toLocaleTimeString('en-US', {
     hour12: true,
     hour: "numeric",
@@ -74,8 +73,6 @@ const date = new Date().toLocaleDateString();
 
 document.getElementById("time").innerHTML = time;
 document.getElementById("date").innerHTML = day + " " + date;
-
-
 
 
 weatherForm.addEventListener('submit', (event) => {

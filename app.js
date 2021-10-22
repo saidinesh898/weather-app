@@ -108,9 +108,6 @@ app.listen(port, () => {
 })
 
 
-
-
-
 // if (process.argv[2]) {
 //     geocode(process.argv[2], (error, data) => {
 //         if (error) {
