@@ -101,10 +101,10 @@ app.get('/code', (req, res) => {
 
 })
 
+let port = process.env.PORT || 80
 
-
-app.listen(process.env.PORT || 80, () => {
-    console.log('server started on port ', 80)
+app.listen(port, () => {
+    console.log('server started on port ', port)
 })
 
 
