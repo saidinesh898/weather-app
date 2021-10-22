@@ -7,11 +7,11 @@ const fs = require('fs')
 const app = express()
 
 
-const viewsPath = path.join(__dirname, '../templates/views')
-const partialsPath = path.join(__dirname, '../templates/partials')
+const viewsPath = path.join(__dirname, 'templates/views')
+const partialsPath = path.join(__dirname, 'templates/partials')
 
 app.set('view engine', 'hbs')
-app.use(express.static(path.join(__dirname, '../public')))
+app.use(express.static(path.join(__dirname, 'public')))
 app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
 
@@ -95,7 +95,7 @@ app.get('/code', (req, res) => {
     let dataJSON = (JSON.parse(dataString))
     const code = req.query.code
     console.log(dataJSON[code])
-    res.send()
+    res.send(dataJSON)
     fs.close()
 
 
