@@ -1,7 +1,13 @@
 const request = require("postman-request")
 const dotenv = require("dotenv")
+const fs = require('fs')
+
 dotenv.config()
 weatherAPI_Token = process.env.WEATHER_API_KEY
+const dataBuffer = fs.readFileSync('./public/code.json')
+const dataString = dataBuffer.toString()
+let dataJSON = (JSON.parse(dataString))
+fs.close
 
 const forcast = (coordinates, callback) => {
     const url = 'http://api.weatherapi.com/v1/current.json?key=' + weatherAPI_Token + '&q=' + coordinates + '&aqi=yes'
@@ -22,6 +28,7 @@ const forcast = (coordinates, callback) => {
                 name: response.body.location.name,
                 region: response.body.location.region,
                 country: response.body.location.country,
+                svg: dataJSON[response.body.current.condition.code]
             })
         }
     })

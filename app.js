@@ -3,6 +3,7 @@ const forcast = require('./src/forcast')
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
+const fs = require('fs')
 const app = express()
 
 
@@ -16,29 +17,29 @@ hbs.registerPartials(partialsPath)
 
 
 app.get('', (req, res) => {
-    var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-    if (ip.substr(0, 7) == "::ffff:") {
-        ip = ip.substr(7)
-        console.log(ip)
-    }
-    forcast(location = ip, (error, ForcastData) => {
-        console.log(ip)
-        if (error) {
-            return res.send({
-                error
-            })
-        }
-        res.render('index', {
-            ForcastData
-        })
-    })
-
-    // res.render('index', {
-    //     title: 'Weather App',
-    //     temp: 30,
-    //     location: "Chennai is Great",
-    //     svg: "cloudy.svg"
+    // var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    // if (ip.substr(0, 7) == "::ffff:") {
+    //     ip = ip.substr(7)
+    //     console.log(ip)
+    // }
+    // forcast(location = ip, (error, ForcastData) => {
+    //     console.log(ip)
+    //     if (error) {
+    //         return res.send({
+    //             error
+    //         })
+    //     }
+    //     res.render('index', {
+    //         ForcastData
+    //     })
     // })
+
+    res.render('index', {
+        title: 'Weather App',
+        temp: 30,
+        location: "Chennai is Great",
+        svg: "cloudy.svg"
+    })
 })
 
 app.get('/help', (req, res) => {
@@ -75,7 +76,52 @@ app.get('/weather', (req, res) => {
 
 })
 
+app.get('/current-weather', (req, res) => {
+    var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    if (ip.substr(0, 7) == "::ffff:") {
+        ip = ip.substr(7)
+    }
+    location = req.query.location
+    if (!location) {
+        location = ip
+    }
+    forcast(location, (error, ForcastData) => {
 
+        console.log(location)
+        if (error) {
+            return res.send({
+                error
+            })
+        }
+
+        res.send({
+            ForcastData,
+        })
+    })
+
+})
+
+function lookupCode() {
+
+    if (item == 1030) {
+        console.log("Satisfied")
+    } else {
+        console.log("Not")
+    }
+}
+
+app.get('/code', (req, res) => {
+
+    const dataBuffer = fs.readFileSync('./public/code.json')
+    const dataString = dataBuffer.toString()
+    let dataJSON = (JSON.parse(dataString))
+    const code = req.query.code
+    console.log(dataJSON[code])
+    res.send()
+    fs.close()
+
+
+})
 
 
 

@@ -1,193 +1,50 @@
-[{
-        "code": "1000",
-        "svg": "cloudy.svg"
-    },
-    {
-        "code": "1003",
-        "svg": "cloudy.svg"
-    },
-    {
-        "code": "1006",
-        "svg": "cloudy.svg"
-    },
-    {
-        "code": "1009",
-        "svg": "cloudy.svg"
-    },
-    {
-        "code": "1030",
-        "svg": "cloudy.svg"
-    },
-    {
-        "code": "1063",
-        "svg": "rainy-4.svg"
-    },
-    {
-        "code": "1066",
-        "svg": "snowy-4.svg"
-    },
-    {
-        "code": "1069",
-        "svg": "rainy-4.svg"
-    },
-    {
-        "code": "1072",
-        "svg": "snowy-4.svg"
-    },
-    {
-        "code": "1087",
-        "svg": "thunder.svg"
-    },
-    {
-        "code": "1114",
-        "svg": "snowy-5.svg"
-    },
-    {
-        "code": "1117",
-        "svg": "snowy-6.svg"
-    },
-    {
-        "code": "1135",
-        "svg": "cloudy.svg"
-    },
-    {
-        "code": "1147",
-        "svg": "cloudy.svg"
-    },
-    {
-        "code": "1150",
-        "svg": "rainy-7.svg"
-    },
-    {
-        "code": "1153",
-        "svg": "rainy-4.svg"
-    },
-    {
-        "code": "1168",
-        "svg": "rainy-4.svg"
-    },
-    {
-        "code": "1171",
-        "svg": "rainy-4.svg"
-    },
-    {
-        "code": "1180",
-        "svg": "rainy-7.svg"
-    },
-    {
-        "code": "1183",
-        "svg": "rainy-5.svg"
-    },
-    {
-        "code": "1186",
-        "svg": "rainy-5.svg"
-    },
-    {
-        "code": "1189",
-        "svg": "rainy-5.svg"
-    },
-    {
-        "code": "1192",
-        "svg": "rainy-6.svg"
-    },
-    {
-        "code": "1195",
-        "svg": "rainy-6.svg"
-    },
-    {
-        "code": "1198",
-        "svg": "rainy-5.svg"
-    },
-    {
-        "code": "1201",
-        "svg": "rainy-6.svg"
-    },
-    {
-        "code": "1204",
-        "svg": "rainy-7.svg"
-    },
-    {
-        "code": "1207",
-        "svg": "rainy-7.svg"
-    },
-    {
-        "code": "1210",
-        "svg": "snowy-5.svg"
-    },
-    {
-        "code": "1213",
-        "svg": "snowy-4.svg"
-    },
-    {
-        "code": "1216",
-        "svg": "snowy-4.svg"
-    },
-    {
-        "code": "1219",
-        "svg": "snowy-4.svg"
-    },
-    {
-        "code": "1222",
-        "svg": "snowy-6.svg"
-    },
-    {
-        "code": "1225",
-        "svg": "snowy-6.svg"
-    },
-    {
-        "code": "1237",
-        "svg": "snowy-4.svg"
-    },
-    {
-        "code": "1240",
-        "svg": "rainy-4.svg"
-    },
-    {
-        "code": "1243",
-        "svg": "rainy-5.svg"
-    },
-    {
-        "code": "1246",
-        "svg": "rainy-5.svg"
-    },
-    {
-        "code": "1249",
-        "svg": "rainy-5.svg"
-    },
-    {
-        "code": "1252",
-        "svg": "rainy-5.svg"
-    },
-    {
-        "code": "1255",
-        "svg": "rainy-5.svg"
-    },
-    {
-        "code": "1258",
-        "svg": "rainy-5.svg"
-    },
-    {
-        "code": "1261",
-        "svg": "rainy-7.svg"
-    },
-    {
-        "code": "1264",
-        "svg": "rainy-7.svg"
-    },
-    {
-        "code": "1273",
-        "svg": "thunder.svg"
-    },
-    {
-        "code": "1276",
-        "svg": "thunder.svg"
-    },
-    {
-        "code": "1279",
-        "svg": "thunder.svg"
-    },
-    {
-        "code": "1282",
-        "svg": "thunder.svg"
-    }
-]
+{
+    "1000": "cloudy.svg",
+    "1003": "cloudy.svg",
+    "1006": "cloudy.svg",
+    "1009": "cloudy.svg",
+    "1030": "cloudy.svg",
+    "1063": "rainy-4.svg",
+    "1066": "snowy-4.svg",
+    "1069": "rainy-4.svg",
+    "1072": "snowy-4.svg",
+    "1087": "thunder.svg",
+    "1114": "snowy-5.svg",
+    "1117": "snowy-6.svg",
+    "1135": "cloudy.svg",
+    "1147": "cloudy.svg",
+    "1150": "rainy-7.svg",
+    "1153": "rainy-4.svg",
+    "1168": "rainy-4.svg",
+    "1171": "rainy-4.svg",
+    "1180": "rainy-7.svg",
+    "1183": "rainy-5.svg",
+    "1186": "rainy-5.svg",
+    "1189": "rainy-5.svg",
+    "1192": "rainy-6.svg",
+    "1195": "rainy-6.svg",
+    "1198": "rainy-5.svg",
+    "1201": "rainy-6.svg",
+    "1204": "rainy-7.svg",
+    "1207": "rainy-7.svg",
+    "1210": "snowy-5.svg",
+    "1213": "snowy-4.svg",
+    "1216": "snowy-4.svg",
+    "1219": "snowy-4.svg",
+    "1222": "snowy-6.svg",
+    "1225": "snowy-6.svg",
+    "1237": "snowy-4.svg",
+    "1240": "rainy-4.svg",
+    "1243": "rainy-5.svg",
+    "1246": "rainy-5.svg",
+    "1249": "rainy-5.svg",
+    "1255": "rainy-5.svg",
+    "1258": "rainy-5.svg",
+    "1261": "rainy-7.svg",
+    "1264": "rainy-7.svg",
+    "1273": "thunder.svg",
+    "1276": "thunder.svg",
+    "1279": "thunder.svg",
+    "1282": "thunder.svg",
+    "hometown": "Chennai"
+}

@@ -9,15 +9,26 @@
 </head>
 <body>
     <div class="glassContainer">
+        <form action="" class="inputLocation">
+            <input type="text" id="Formlocation" Value="Chennai" placeholder="Location">
+            <button type="submit">Search</button>
+        </form>
+        <br>
         <div class="glassCard">
-            <p>{{ForcastData.temp_c}}°C</p>
-            <p>{{ForcastData.name}}  {{ForcastData.region }}</p>
-            <p><b>{{ForcastData.country}} </b></p>
-            <img src="/svg/{{svg}}" alt="">
+           <p id="location" class="location"></p>
         </div>
-    
+        
 
     </div>
-
+    <p id="temp_c"></p>
+    <p id="city"></p>
+    <p id="state"></p>
+    <p id="country"></p>
+    <p id="msg"></p>
+    <p id="svg"></p>
+    <p id="uv"></p>
+    <p id="humidity"></p>
+    <p id="feelslike_c"></p>
+   <script src="/js/app.js"></script>
 </body>
 </html>
