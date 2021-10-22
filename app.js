@@ -80,7 +80,7 @@ app.get('/weather', (req, res) => {
 
 
 app.listen(443, () => {
-    console.log('server started on port ', 80)
+    console.log('server started on port ', 443)
 })
 
 
