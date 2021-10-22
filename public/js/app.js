@@ -33,9 +33,9 @@ fetch('/current-weather').then((response) => {
 })
 
 function updateWeather(data) {
-    temp_c.textContent = data.temp_c
+    temp_c.textContent = data.temp_c + " °C"
     city.textContent = data.name
-    state.textContent = data.region
+    state.textContent = data.region + " ,"
     country.textContent = data.country
     uv.textContent = data.uv
     humidity.textContent = data.humidity
@@ -43,8 +43,38 @@ function updateWeather(data) {
     msg.textContent = data.condition.text
     svg.textContent = data.svg
     document.getElementById("Formlocation").value = data.name
+    document.getElementById("weatherSVG").src = "./svg/" + data.svg;
+
 
 }
+
+
+const d = new Date();
+
+const weekday = new Array(7);
+weekday[0] = "Sunday";
+weekday[1] = "Monday";
+weekday[2] = "Tuesday";
+weekday[3] = "Wednesday";
+weekday[4] = "Thursday";
+weekday[5] = "Friday";
+weekday[6] = "Saturday";
+
+let day = weekday[d.getDay()];
+
+
+
+const time = new Date().toLocaleTimeString('en-US', {
+    hour12: true,
+    hour: "numeric",
+    minute: "numeric"
+});
+
+const date = new Date().toLocaleDateString();
+
+document.getElementById("time").innerHTML = time;
+document.getElementById("date").innerHTML = day + " " + date;
+
 
 
 

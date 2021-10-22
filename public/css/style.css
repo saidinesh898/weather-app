@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
 .glassContainer {
-    background-image: url(../img/summer.webp);
-    min-height: 60vh;
+    background: linear-gradient( rgba(131, 131, 131, 0.034), rgba(150, 150, 150, 0.103)), url(../img/summer.jpg);
+    min-height: 65vh;
     padding-top: 10vh;
     padding-left: 2vw;
     background-size: cover;
+    background-repeat: no-repeat;
+}
+
+* {
+    font-family: 'Work Sans', sans-serif;
 }
 
 .glassCard {
@@ -19,9 +25,152 @@
     color: #FFF;
 }
 
-body {
-    background-color: #F0FFFF;
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
 }
+
+body {
+    background-color: #FFFFF0;
+    color: #0a1322;
+}
+
+.inputLocation {
+    position: relative;
+    top: -8vh;
+    display: flex;
+    justify-content: center;
+}
+
+input[type=text],
+textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #DDDDDD;
+}
+
+input[type=text]:focus,
+textarea:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgba(81, 203, 238, 1);
+    background: rgba( 255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 20px);
+    -webkit-backdrop-filter: blur( 20px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+}
+
+.Formlocation {
+    text-align: center;
+    width: 500px;
+    border-radius: 25px;
+    height: 40px;
+    border-color: #bdbdbd;
+    background: #f5f5f53b;
+    box-shadow: 0;
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 13.5px);
+    -webkit-backdrop-filter: blur( 13.5px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+}
+
+.search {
+    /* image replacement */
+    position: relative;
+    top: 10px;
+    left: -50px;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border: 0px solid;
+}
+
+.search:hover {
+    font-weight: bold;
+}
+
+.flex-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-1 {
+    margin-top: -5vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: auto;
+    font-size: 2em;
+    color: #0a1322;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.time {
+    font-weight: 600;
+}
+
+.hero-2 {
+    margin-top: -7vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 40%;
+    text-align: right;
+    font-size: 2em;
+    color: #0a1322;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.wrapper2 {
+    display: inline-flex;
+}
+
+.day {
+    display: flex;
+}
+
+.dayfont {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 0.9em;
+}
+
+.hero-2 .city {
+    font-size: 1.8em;
+}
+
+
+/* 
+.metrics {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.metrics .wrapper {
+    margin-top: 5%;
+    height: 100px;
+    min-width: 33%;
+    max-width: 33%;
+    background: white;
+    border: 1px solid black;
+}
+
+.metrics .wrapper p {
+    position: relative;
+    top: 35%;
+    left: 40%
+} */
 
 @media (max-width: 1120px) {
     .glassCard {
@@ -38,10 +187,36 @@ body {
         color: #FFF;
     }
     .glassContainer {
-        background-image: url(../img/summer.webp);
+        background-image: url(../img/summer.jpg);
         min-height: 45vh;
         padding-top: 10vh;
         padding-left: 2vw;
         background-size: cover;
+    }
+    .hero-1 {
+        position: relative;
+        top: -10px;
+        margin-top: -10vh;
+        margin-bottom: 10%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        width: 100%;
+        text-align: center;
+        font-size: 1.2em;
+        color: #0a1322;
+    }
+    .time {
+        font-size: 2.5em !important;
+    }
+    .date {
+        padding-top: 1em;
+        font-size: 2em !important;
+    }
+    .hero-2 {
+        display: none;
+    }
+    .Formlocation {
+        position: relative;
+        left: 10px;
     }
 }

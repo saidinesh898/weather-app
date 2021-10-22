@@ -17,29 +17,7 @@ hbs.registerPartials(partialsPath)
 
 
 app.get('', (req, res) => {
-    // var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-    // if (ip.substr(0, 7) == "::ffff:") {
-    //     ip = ip.substr(7)
-    //     console.log(ip)
-    // }
-    // forcast(location = ip, (error, ForcastData) => {
-    //     console.log(ip)
-    //     if (error) {
-    //         return res.send({
-    //             error
-    //         })
-    //     }
-    //     res.render('index', {
-    //         ForcastData
-    //     })
-    // })
-
-    res.render('index', {
-        title: 'Weather App',
-        temp: 30,
-        location: "Chennai is Great",
-        svg: "cloudy.svg"
-    })
+    res.render('index')
 })
 
 app.get('/help', (req, res) => {
