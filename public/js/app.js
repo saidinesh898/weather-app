@@ -35,7 +35,7 @@ fetch('/current-weather').then((response) => {
 function updateWeather(data) {
     temp_c.textContent = data.temp_c + " °C"
     city.textContent = data.name
-    state.textContent = data.region + " ,"
+    state.textContent = data.region + ", "
     country.textContent = data.country
     uv.textContent = data.uv
     humidity.textContent = data.humidity
