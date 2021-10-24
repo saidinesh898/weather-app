@@ -309,5 +309,7 @@ a {
         border: 1px solid rgba(255, 255, 255, 0.39);
         min-height: 250px;
     }
-    .lastelement {}
+    .lastelement {
+        margin-bottom: 70px;
+    }
 }
