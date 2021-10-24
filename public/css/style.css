@@ -162,6 +162,7 @@ textarea:focus {
 
 .row {
     width: 100%;
+    margin-bottom: 65px;
 }
 
 .metricswrapper {
@@ -213,6 +214,7 @@ textarea:focus {
 a {
     color: inherit;
     text-decoration: none;
+    decoration: none;
 }
 
 .footer p {
@@ -295,6 +297,7 @@ a {
         max-width: 100vw;
         padding-left: 20px;
         padding-right: 20px;
+        margin-bottom: 0px;
     }
     .glassUI {
         margin-top: 10%;
@@ -306,7 +309,5 @@ a {
         border: 1px solid rgba(255, 255, 255, 0.39);
         min-height: 250px;
     }
-    .lastelement {
-        margin-bottom: 70px;
-    }
+    .lastelement {}
 }
