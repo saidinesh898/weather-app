@@ -237,9 +237,7 @@ a {
 }
 
 .metrics .wrapper p {
-    position: relative;
-    top: 35%;
-    left: 40%
+   
 } */
 
 @media (max-width: 768px) {
