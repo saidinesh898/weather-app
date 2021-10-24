@@ -40,8 +40,8 @@ function updateWeather(data) {
     uv.textContent = data.uv
     humidity.textContent = data.humidity
     feelslike_c.textContent = data.feelslike_c
-    msg.textContent = data.condition.text
-    svg.textContent = data.svg
+    msg.textContent = "" + data.condition.text
+        //svg.textContent = data.svg
     document.getElementById("Formlocation").value = data.name
     document.getElementById("weatherSVG").src = "./svg/" + data.svg;
 

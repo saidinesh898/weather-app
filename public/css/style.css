@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
-.glassContainer {
+body {
     background: linear-gradient( rgba(131, 131, 131, 0.034), rgba(150, 150, 150, 0.103)), url(../img/summer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.glassContainer {
+    /* background: linear-gradient( rgba(131, 131, 131, 0.034), rgba(150, 150, 150, 0.103)), url(../img/summer.jpg); */
     min-height: 65vh;
     padding-top: 10vh;
     padding-left: 2vw;
@@ -149,6 +156,69 @@ textarea:focus {
     font-size: 1.8em;
 }
 
+.blackbg {
+    background-color: #000;
+}
+
+.row {
+    width: 100%;
+}
+
+.metricswrapper {
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.metcon {
+    margin-top: 10px;
+    font-size: 2em;
+    color: rgb(7, 0, 58);
+}
+
+.temp {
+    font-weight: 600;
+    color: rgb(7, 0, 58);
+}
+
+.glassUI {
+    margin-left: 2%;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(16.8px);
+    -webkit-backdrop-filter: blur(16.8px);
+    border: 1px solid rgba(255, 255, 255, 0.62);
+}
+
+.metricheader {
+    padding-top: 25px
+}
+
+.humidity {
+    padding-top: px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.2px);
+    -webkit-backdrop-filter: blur(13.2px);
+    text-align: center;
+}
+
+a {
+    color: inherit;
+}
+
+.footer p {
+    padding-top: 10px;
+    text-decoration: none;
+}
+
 
 /* 
 .metrics {
@@ -172,7 +242,10 @@ textarea:focus {
     left: 40%
 } */
 
-@media (max-width: 1120px) {
+@media (max-width: 768px) {
+    body {
+        background: #b2caca3f;
+    }
     .glassCard {
         background: rgba( 255, 255, 255, 0.25);
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
@@ -218,5 +291,20 @@ textarea:focus {
     .Formlocation {
         position: relative;
         left: 10px;
+    }
+    .row {
+        max-width: 100vw;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .glassUI {
+        margin-top: 10%;
+        background: rgba(255, 255, 255, 0.14);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.6px);
+        -webkit-backdrop-filter: blur(7.6px);
+        border: 1px solid rgba(255, 255, 255, 0.39);
+        min-height: 250px;
     }
 }
