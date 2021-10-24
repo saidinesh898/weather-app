@@ -212,6 +212,7 @@ textarea:focus {
 
 a {
     color: inherit;
+    text-decoration: none;
 }
 
 .footer p {
@@ -304,5 +305,8 @@ a {
         -webkit-backdrop-filter: blur(7.6px);
         border: 1px solid rgba(255, 255, 255, 0.39);
         min-height: 250px;
+    }
+    .lastelement {
+        margin-bottom: 70px;
     }
 }
