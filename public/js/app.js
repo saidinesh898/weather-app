@@ -81,7 +81,7 @@ weatherForm.addEventListener('submit', (event) => {
     let jsonData;
     fetchWeather(address).then((data) => {
         updateWeather(data)
+        var mainContainer = document.getElementById("myData");
 
     })
-
 })

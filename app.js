@@ -101,7 +101,7 @@ app.get('/code', (req, res) => {
 
 })
 
-let port = process.env.PORT || 80
+let port = process.env.PORT || 8001
 
 app.listen(port, () => {
     console.log('server started on port ', port)
