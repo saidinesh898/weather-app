@@ -1,3 +1,11 @@
+//Using IP
+fetch(`/current-weather/?location=${location}`).then((response) => {
+    response.json().then((data) => {
+        data = data.ForcastData
+        updateWeather(data)
+    })
+})
+
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -23,16 +31,6 @@ function getLocation() {
 getLocation()
 
 
-// function fetchWeather(address, callback) {
-//     return fetch('/weather?location=chennai' + address)
-//         .then((response) => {
-//             return response.json().then((data) => {
-//                 return data.ForcastData;
-//             }).catch((err) => {
-//                 console.log(err);
-//             })
-//         });
-// }
 
 
 const weatherForm = document.querySelector('form')
