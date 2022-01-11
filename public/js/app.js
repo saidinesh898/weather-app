@@ -1,5 +1,5 @@
 //Using IP
-fetch(`/current-weather/?location=${location}`).then((response) => {
+fetch(`/current-weather/`).then((response) => {
     response.json().then((data) => {
         data = data.ForcastData
         updateWeather(data)
@@ -17,6 +17,7 @@ function getLocation() {
   
   function showPosition(position) {
     let location =  position.coords.latitude+','+position.coords.longitude
+    console.log(location)
     fetch(`/current-weather/?location=${location}`).then((response) => {
         response.json().then((data) => {
             data = data.ForcastData
