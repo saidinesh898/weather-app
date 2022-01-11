@@ -1,13 +1,38 @@
-function fetchWeather(address, callback) {
-    return fetch('/weather?location=' + address)
-        .then((response) => {
-            return response.json().then((data) => {
-                return data.ForcastData;
-            }).catch((err) => {
-                console.log(err);
-            })
-        });
-}
+
+function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+      x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+  }
+  
+  function showPosition(position) {
+    let location =  position.coords.latitude+','+position.coords.longitude
+    fetch(`/current-weather/?location=${location}`).then((response) => {
+        response.json().then((data) => {
+            data = data.ForcastData
+            updateWeather(data)
+        })
+    })
+
+
+  }
+
+
+getLocation()
+
+
+// function fetchWeather(address, callback) {
+//     return fetch('/weather?location=chennai' + address)
+//         .then((response) => {
+//             return response.json().then((data) => {
+//                 return data.ForcastData;
+//             }).catch((err) => {
+//                 console.log(err);
+//             })
+//         });
+// }
 
 
 const weatherForm = document.querySelector('form')
@@ -25,12 +50,7 @@ const humidity = document.querySelector('#humidity')
 const feelslike_c = document.querySelector('#feelslike_c')
 const Formlocation = document.querySelector('Formlocation')
 
-fetch('/current-weather').then((response) => {
-    response.json().then((data) => {
-        data = data.ForcastData
-        updateWeather(data)
-    })
-})
+
 
 function updateWeather(data) {
     temp_c.textContent = data.temp_c + " °C"

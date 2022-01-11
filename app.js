@@ -59,6 +59,7 @@ app.get('/current-weather', (req, res) => {
     if (ip.substr(0, 7) == "::ffff:") {
         ip = ip.substr(7)
     }
+    console.log(req.query.location)
     location = req.query.location
     if (!location) {
         location = ip
@@ -101,7 +102,7 @@ app.get('/code', (req, res) => {
 
 })
 
-let port = process.env.PORT || 8001
+let port = process.env.PORT || 80
 
 app.listen(port, () => {
     console.log('server started on port ', port)
