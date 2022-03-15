@@ -91,7 +91,7 @@ function lookupCode() {
 
 app.get('/code', (req, res) => {
 
-    const dataBuffer = fs.readFileSync('./public/code.json')
+    const dataBuffer = fs.readFileSync('./app/public/code.json')
     const dataString = dataBuffer.toString()
     let dataJSON = (JSON.parse(dataString))
     const code = req.query.code
